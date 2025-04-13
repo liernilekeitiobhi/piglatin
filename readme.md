@@ -191,16 +191,31 @@ git push
 Username eta token sartu VSC-n
 ```
 
-Programa lokalean martxan jarri badugu, `__pycache__` izeneko karpeta bat sortuko da automatikoki. Komeni da hau ez githubera igotzea. Horretarako, `.gitignore` izeneko karpeta bat sortuko dugu gure karpeta orokorraren barruan eta `__pycache__` bertan sartuko dugu. Karpeta horretan dagoena `git`-ek saihestu egingo du.
+Programa lokalean martxan jarri badugu, `__pycache__` izeneko karpeta bat sortuko da automatikoki. Komeni da hau `git` biltegiak ez kontrolatzea. Horretarako, `.gitignore` izeneko karpeta bat sortuko dugu gure karpeta orokorraren barruan eta `__pycache__` bertan sartuko dugu.  Karpeta horretan dagoena `git`-ek saihestu egingo du eta `__pycache__` barrukoa ez da gitHube-ra igoko. 
 
 
 ### Render.com-en:
 
-1. Kontua sortu
-2. GitHub kontua konektatu
-3. Zure proiektua hautatu
-4. Flask aplikazioa hautatu eta “Deploy” sakatu
+1. Kontua sortu.
+2. GitHub kontua konektatu.
 
-Render-ek zure aplikazioa automatikoki abiaraziko du eta zure webgunea publiko egongo da.
+[Hemen](https://render.com/docs/deploy-flask)
+
+Lehendabizi, Rederri bere zerbitzarian `flask` instalatu behar duela esan behar diogu. Horretarako gure karpetan `requirements.txt` izeneko artxibo bat sortuko dugu eta hau idatzi: 
+
+```
+# Flask Framework
+Flask==1.0.2
+```
+Horrela, Rederrek badaki zer instalatu zerbitzarian. Hau, guk lokalean egin dugun `pip install flask` -en berdina egitea da, baina renderren zerbitzarian.
+
+Ondoren, Renderren jarraitu:
+
+Web service berri bat sortu. 
+![Flask-render](static/img/readme_azalpena/flask-render.png)
+GitHub-eko dagokion repositoriora konektatu. 
+![Flask-render-2](static/img/readme_azalpena/flask-render-2.png)
+Beste guztia horrela gelditu behar da:
+![Flask-render-2](static/img/readme_azalpena/flask-render-3.png)
 
 ---
