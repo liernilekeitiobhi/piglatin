@@ -66,6 +66,7 @@ pip install flask
 3. **Nola aldatzen dut HTML-a JavaScript-ekin?**  
    `document.getElementById()` edo `innerHTML` bezalako metodoekin, HTML barruko edukia alda dezakegu.
 
+![Funtzionamendua](static/img/readme_azalpena/prozesua.png)
 ---
 
 ## 📂 FITXATEGIEN FUNTZIOA
@@ -105,7 +106,7 @@ Botoia sakatzean gertatzen den guztia kontrolatzen du:
 
 ### `utils.py`
 
-Pig Latin itzultzeko logika hemen dago. Horrela, `app.py` fitxategia arinago geratzen da eta kodea hobeto antolatuta dago.
+Pig Latin itzultzeko logika hemen dago. Hau, `app.py` fitxategian ere jarri genezake, baina beste batean edukiz `app.py` arinago geratzen da eta kodea hobeto antolatuta dago.
 
 ---
 
@@ -117,7 +118,7 @@ Web aplikazioa zure ordenagailuan exekutatzeko (zure nabigatzailean probatzeko),
 flask --app app run
 ```
 
-Honek zure aplikazioa martxan jarriko du helbide honetan:  
+Honek zure aplikazioa martxan jarriko du helbide honetan (sartu URL hau nabigatzailean):  
 👉 `http://127.0.0.1:5000`
 
 ---
@@ -126,7 +127,7 @@ Honek zure aplikazioa martxan jarriko du helbide honetan:
 
 Zure aplikazioa interneten argitaratu nahi baduzu, **Render.com** plataforma erabili dezakezu (doakoa da proiektu bakarra izanez gero).
 
-### Prestaketa:
+### Prestaketa (Renderrek Githubetik hartuko du kodea, beraz bertara igo behar dugu):
 
 1. Sortu Git biltegia zure karpetan:
 
@@ -146,11 +147,17 @@ git add .
 git commit -m "Lehen bertsioa"
 ```
 
-4. Gehitu GitHub-erako esteka:
+3. Sortu GitHub-en repositorio bat:
+![Repositorioa sortzen 1](static/img/readme_azalpena/repositorioa-sortzen-0.png)
+![Repositorioa sortzen 1](static/img/readme_azalpena/repositorioa-sortzen.png)
+
+
+4. Gehitu GitHub-erako esteka lokaleko git biltegiari:
 
 ```
 git remote add origin <zure-GitHub-repositorioaren-URL-a>
 ```
+![Repositorioa sortzen 1](static/img/readme_azalpena/repositorioa-link.png)
 
 5. Bidali fitxategiak GitHub-era:
 
