@@ -162,14 +162,13 @@ git commit -m "Lehen bertsioa"
 ```
 git remote add origin <zure-GitHub-repositorioaren-URL-a>
 ```
-![Repositorioaren linka](static/img/readme_azalpena/repositorioa-link.png)
-
+![Repositorioaren linka](static/img/readme_azalpena/%20repositoriora-link.png)
 5. Bidali fitxategiak GitHub-era:
 
 ```
 git push -u origin main
 ```
-Honek GitHubeko erabiltzailea eta pasahitza eskatuko dizkigu VSC-n.
+Hau egitean GitHubeko erabiltzailea eta pasahitza eskatuko dizkigute VSC-n.
 ![Username eskaera VSC](static/img/readme_azalpena/username-eskaera-VSC.png)
 
 Pasahitzerako, token bat sortu behar dugu GitHuben. 
