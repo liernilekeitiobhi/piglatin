@@ -159,7 +159,7 @@ git commit -m "Lehen bertsioa"
 ```
 git remote add origin <zure-GitHub-repositorioaren-URL-a>
 ```
-![Repositorioa sortzen 1](static/img/readme_azalpena/repositorioa-link.png)
+![Repositorioaren linka](static/img/readme_azalpena/repositorioa-link.png)
 
 5. Bidali fitxategiak GitHub-era:
 
@@ -167,9 +167,20 @@ git remote add origin <zure-GitHub-repositorioaren-URL-a>
 git push -u origin main
 ```
 Honek GitHubeko erabiltzailea eta pasahitza eskatuko dizkigu VSC-n.
-
+![Username eskaera VSC](static/img/readme_azalpena/username-eskaera-VSC.png)
 
 Pasahitzerako, token bat sortu behar dugu GitHuben. 
+![Token sortzen 1](static/img/readme_azalpena/token-sortzen-1.png)
+![Token sortzen 1](static/img/readme_azalpena/token-sortzen-2.png)
+![Token sortzen 1](static/img/readme_azalpena/token-sortzen-3.png)
+![Token sortzen 1](static/img/readme_azalpena/token-sortzen-4.png)
+Hemen tokenari izen bat jarri behar diogu, kadukatzeko data bat zehaztu eta token horrek emango dituen permisuak aukeratu. 
+Nik inoiz kadukatzen ez den token bat daukat sortuta permisu guztiak dituena. Modu honetan, beti hori erabiltzen dut. 
+![Token sortzen 1](static/img/readme_azalpena/token-sortzen-5.png)
+Tokena ordenagailuan modu lokalean gorde. EZ PARTEKATU INOIZ SAREAN.
+![Token sortzen 1](static/img/readme_azalpena/token-sortzen-6.png)
+
+
 
 💡 **Oharra**: Hau lehen aldiz bakarrik egin behar da. Hurrengoetan nahikoa da:
 
@@ -177,7 +188,11 @@ Pasahitzerako, token bat sortu behar dugu GitHuben.
 git add .
 git commit -m "egindako aldaketak"
 git push
+Username eta token sartu VSC-n
 ```
+
+Programa lokalean martxan jarri badugu, `__pycache__` izeneko karpeta bat sortuko da automatikoki. Komeni da hau ez githubera igotzea. Horretarako, `.gitignore` izeneko karpeta bat sortuko dugu gure karpeta orokorraren barruan eta `__pycache__` bertan sartuko dugu. Karpeta horretan dagoena `git`-ek saihestu egingo du.
+
 
 ### Render.com-en:
 
