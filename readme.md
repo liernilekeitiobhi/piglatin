@@ -73,11 +73,13 @@ pip install flask
 
 ### `app.py`
 
-Web zerbitzaria martxan jartzen duen Python fitxategia da. Hiru zeregin nagusi ditu:
+Web zerbitzaria martxan jartzen duen Python fitxategia da. Bi zeregin nagusi ditu:
 
 1. Hasierako orria (`index.html`) erakusten du `/` helbidera sartzean.
-2. Erabiltzaileak bidaltzen duen esaldia jasotzen du (`/translation`).
-3. Esaldia Pig Latin hizkuntzara itzultzen du eta itzulpena bueltatzen dio erabiltzaileari.
+2. Itzulpena kudeatzen du.
+    2.1. Erabiltzaileak `POST` bidez `/translation` URL-ra bidaltzen dion esaldia jasotzen du.
+    2.2. Esaldia Pig Latin hizkuntzara itzultzen du.
+    2.3. Itzulpena bueltatzen dio erabiltzaileari.
 
 ### `index.html`
 
@@ -85,7 +87,7 @@ Erabiltzaileari erakusten zaion orrialdea da:
 
 - Testu-kutxa bat du: esaldia sartzeko
 - Botoi bat: esaldia bidaltzeko
-- Hutsik dagoen gune bat: itzulpena erakusteko
+- Itzulpena erakusteko `div` bat dauka (hasieran hutsik egongo da).
 
 Hau beste bi fitxategirekin konektatuta dago:
 - `style.css`: itxura
@@ -97,7 +99,7 @@ Orrialdearen estilo bisuala kontrolatzen du. Adibidez: letra-tipoak, koloreak, m
 
 ### `main.js`
 
-Botoia sakatzean gertatzen den guztia kontrolatzen du:
+Erabiltzaileak botoia sakatzean gertatzen den guztia kontrolatzen du:
 
 1. Esaldia jasotzen du HTML-etik
 2. Zerbitzariari bidaltzen dio (fetch POST bidez)
@@ -106,7 +108,7 @@ Botoia sakatzean gertatzen den guztia kontrolatzen du:
 
 ### `utils.py`
 
-Pig Latin itzultzeko logika hemen dago. Hau, `app.py` fitxategian ere jarri genezake, baina beste batean edukiz `app.py` arinago geratzen da eta kodea hobeto antolatuta dago.
+Pig Latin itzultzeko logika hemen dago. Hau, `app.py` fitxategian ere jarri genezake, baina beste dokumentu batean edukiz `app.py` arinago geratzen da eta kodea hobeto antolatuta dago.
 
 ---
 
@@ -152,7 +154,7 @@ git commit -m "Lehen bertsioa"
 ![Repositorioa sortzen 1](static/img/readme_azalpena/repositorioa-sortzen.png)
 
 
-4. Gehitu GitHub-erako esteka lokaleko git biltegiari:
+4. Gehitu GitHub-erako esteka lokalean dagoen git biltegiari:
 
 ```
 git remote add origin <zure-GitHub-repositorioaren-URL-a>
@@ -164,6 +166,10 @@ git remote add origin <zure-GitHub-repositorioaren-URL-a>
 ```
 git push -u origin main
 ```
+Honek GitHubeko erabiltzailea eta pasahitza eskatuko dizkigu VSC-n.
+
+
+Pasahitzerako, token bat sortu behar dugu GitHuben. 
 
 💡 **Oharra**: Hau lehen aldiz bakarrik egin behar da. Hurrengoetan nahikoa da:
 
