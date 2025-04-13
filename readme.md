@@ -18,111 +18,117 @@ app.py
 
 ---
 
-## 💻 1. EDITORE BAT AUKERATU
+## 💻 1. KODEA EDITATZEKO: VISUAL STUDIO CODE
 
-Kodea editatzeko, **Visual Studio Code** oso aukera ona da. Honako estekatik deskarga daiteke:  
+Kodea idazteko eta fitxategiak kudeatzeko, **Visual Studio Code (VSC)** editorea erabiltzea gomendatzen da. Hau programa bat da, programatzaileek erabiltzen dutena beren kodea editatzeko.
+
+Deskargatzeko:  
 👉 [Visual Studio Code deskargatu](https://code.visualstudio.com/download)
 
-Editorearen ezker aldean karpeten egitura ikusiko dugu, eta bertan fitxategiak eta karpetak sor ditzakegu. Fitxategiaren amaierako `.py`, `.html`, `.css`... bezalako luzapenei esker, VSC-k zein hizkuntza erabiliko dugun automatikoki antzematen du.
+VSC-ren ezker aldean zure proiektuaren karpeta ikusiko duzu. Bertan fitxategiak sor daitezke, adibidez `.py`, `.html`, `.js`, etab. Amaiera horiei esker, VSC-k jakiten du zein hizkuntza erabili.
 
 ---
 
-## 🧪 2. FLASK ERABILTZEKO PRESTATU
+## 🧪 2. FLASK PRESTATU ETA INSTALATU
 
-Flask erabili ahal izateko, lehenik eta behin instalatu behar dugu. Horretarako, VSC-ren terminala ireki:
+**Flask** Python-en bidez web aplikazioak sortzeko erabiltzen den liburutegi (edo toolkit) bat da.
 
+### 2.1. Terminala ireki
+
+Visual Studio Code-en barruan, joan goiko menuan:  
 > **Terminal → New Terminal**
 
-Terminalean honako komandoa idatzi:
+### 2.2. Flask instalatu
+
+Terminalean idatzi hau:
 
 ```
 pip install flask
 ```
 
-**💡 Oharra**: *pip* da Python-en paketak (libreriak edo moduluak) instalatzeko tresna nagusia.
+💡**Zer da `pip`?**  
+*`pip` Python-en paketak instalatzeko tresna da*. Adibidez, Flask bezala kanpoko liburutegi bat zure ordenagailuan instalatzeko erabiltzen da.
 
-Honekin, Flask zure sisteman instalatuta egongo da eta bere funtzioak erabilgarri izango dira.
+---
+
+## 🧠 3. KODEAREN AZALPENA
+
+### Zer jakin behar dut hasieran?
+
+1. **Zer da HTTP eskaera bat?**  
+   Web nabigatzaileak zerbitzariari informazioa eskatzeko egiten duen komunikazioa da. Bi mota garrantzitsu daude:
+   - `GET`: Informazioa eskuratzeko
+   - `POST`: Informazioa bidaltzeko
+
+2. **Zer da `fetch()`?**  
+   JavaScript-en funtzio bat da, web zerbitzari bati eskaera bat egiteko (GET edo POST). Adibidez, esaldi bat zerbitzarira bidaltzeko eta erantzuna jasotzeko.
+
+3. **Nola aldatzen dut HTML-a JavaScript-ekin?**  
+   `document.getElementById()` edo `innerHTML` bezalako metodoekin, HTML barruko edukia alda dezakegu.
 
 ---
 
-## 🧠 3. KODEAREN AZALPEN OROKORRA
-
-Fitxategi bakoitzak zer funtzio duen azaltzen da. Kodearen barruan komentario gehiago daude, xehetasun gehiagorekin.
-
-### Ulertu beharreko kontzeptuak:
-
-1. HTTP eskaera motak: **GET** eta **POST**
-2. JavaScript-eko `fetch()` metodoa
-3. Nola idatzi HTML-eko `<div>` batean JS bidez
-
----
+## 📂 FITXATEGIEN FUNTZIOA
 
 ### `app.py`
 
-Programa nagusia da. Bi URL kudeatzen ditu:
+Web zerbitzaria martxan jartzen duen Python fitxategia da. Hiru zeregin nagusi ditu:
 
-1. `/` (root): `index.html` kargatzen du.
-2. `/translation`: POST eskaera bat jasotzen du, esaldia Pig Latin hizkuntzara itzultzen du, eta itzulpena frontend-era bidaltzen du JSON formatuan.
-
----
+1. Hasierako orria (`index.html`) erakusten du `/` helbidera sartzean.
+2. Erabiltzaileak bidaltzen duen esaldia jasotzen du (`/translation`).
+3. Esaldia Pig Latin hizkuntzara itzultzen du eta itzulpena bueltatzen dio erabiltzaileari.
 
 ### `index.html`
 
-Erabiltzaileak ikusiko duen orrialde nagusia da. Bertan daude:
+Erabiltzaileari erakusten zaion orrialdea da:
 
-- Esaldi bat sartzeko formularioa  
-- Itzulpena eskatzeko botoia  
-- Itzulpena agertzeko HTML elementu bat  
+- Testu-kutxa bat du: esaldia sartzeko
+- Botoi bat: esaldia bidaltzeko
+- Hutsik dagoen gune bat: itzulpena erakusteko
 
-Fitxategi hau honako hauekin konektatuta dago:
-
-- `style.css` (estiloa)
-- `main.js` (logika)
-
----
+Hau beste bi fitxategirekin konektatuta dago:
+- `style.css`: itxura
+- `main.js`: funtzionamendua
 
 ### `style.css`
 
-HTML orrialdeari estilo bisual erakargarri bat ematen dio. Koloreak, tamainak eta antolaketa hemen definitzen dira.
-
----
+Orrialdearen estilo bisuala kontrolatzen du. Adibidez: letra-tipoak, koloreak, marjinak, irudia, etab.
 
 ### `main.js`
 
-Erabiltzaileak botoia sakatzean gertatzen dena kudeatzen du:
+Botoia sakatzean gertatzen den guztia kontrolatzen du:
 
-- Formularioaren edukia jasotzen du  
-- `/translation` URL-era POST bidez bidaltzen du  
-- Jasotako itzulpena HTML-an erakusten du  
-
----
+1. Esaldia jasotzen du HTML-etik
+2. Zerbitzariari bidaltzen dio (fetch POST bidez)
+3. Itzulpena jasotzen du
+4. Itzulpena orrian bistaratzen du
 
 ### `utils.py`
 
-Pig Latin-era itzultzeko logika hemen kokatzen da. `app.py`-tik funtzio hau inportatzen da, kodea antolatuago egoteko.
+Pig Latin itzultzeko logika hemen dago. Horrela, `app.py` fitxategia arinago geratzen da eta kodea hobeto antolatuta dago.
 
 ---
 
 ## 🚀 4. APLIKAZIOA LOKALEAN EXEKUTATU
 
-Zerbitzari lokal batean abiarazteko, terminalean honako komandoa idatzi:
+Web aplikazioa zure ordenagailuan exekutatzeko (zure nabigatzailean probatzeko), terminalean honako komandoa idatzi:
 
 ```
 flask --app app run
 ```
 
-Honekin aplikazioa martxan egongo da helbide honetan:  
+Honek zure aplikazioa martxan jarriko du helbide honetan:  
 👉 `http://127.0.0.1:5000`
 
 ---
 
-## ☁️ 5. APLIKAZIOA ZERBITZARI EXTERNO BATEAN ARGITARATU
+## ☁️ 5. APLIKAZIOA INTERNETERA IGO (Render.com)
 
-Aplikazioa **Render.com** bezalako doako zerbitzari batera igo daiteke.
+Zure aplikazioa interneten argitaratu nahi baduzu, **Render.com** plataforma erabili dezakezu (doakoa da proiektu bakarra izanez gero).
 
-### Pausoak:
+### Prestaketa:
 
-1. Git biltegia hasieratu:
+1. Sortu Git biltegia zure karpetan:
 
 ```
 git init
@@ -134,26 +140,39 @@ git init
 git add .
 ```
 
-3. Egindako aldaketak gorde:
+3. Aldaketak gorde (commit egin):
 
 ```
 git commit -m "Lehen bertsioa"
 ```
 
-4. GitHub-erako urruneko biltegia gehitu:
+4. Gehitu GitHub-erako esteka:
 
 ```
-git remote add origin <zure-repositorioaren-URL-a>
+git remote add origin <zure-GitHub-repositorioaren-URL-a>
 ```
 
-5. Aldaketak GitHub-era bidali:
+5. Bidali fitxategiak GitHub-era:
 
 ```
 git push -u origin main
 ```
-**💡 Oharra**: Hau lehen aldiz soilik egin behar da. Ondoren `add .` eta `commit -m "egindako aldaketen azalpena"` egin ondoren nahikoa da `git push`
 
+💡 **Oharra**: Hau lehen aldiz bakarrik egin behar da. Hurrengoetan nahikoa da:
 
-6. Render.com-en kontua sortu eta GitHub-era konektatu. Proiektua hautatu, eta zure Flask aplikazioa automatikoki exekutatuko da.
+```
+git add .
+git commit -m "egindako aldaketak"
+git push
+```
 
+### Render.com-en:
 
+1. Kontua sortu
+2. GitHub kontua konektatu
+3. Zure proiektua hautatu
+4. Flask aplikazioa hautatu eta “Deploy” sakatu
+
+Render-ek zure aplikazioa automatikoki abiaraziko du eta zure webgunea publiko egongo da.
+
+---
