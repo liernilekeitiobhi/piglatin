@@ -49,6 +49,9 @@ pip install flask
 💡**Zer da `pip`?**  
 *`pip` Python-en paketak instalatzeko tresna da*. Adibidez, Flask bezala kanpoko liburutegi bat zure ordenagailuan instalatzeko erabiltzen da.
 
+
+[Hemen](https://flask.palletsprojects.com/en/stable/) flask-en web orria. Bertan, tutorial bat ere badago. 
+
 ---
 
 ## 🧠 3. KODEAREN AZALPENA
@@ -199,7 +202,7 @@ Programa lokalean martxan jarri badugu, `__pycache__` izeneko karpeta bat sortuk
 1. Kontua sortu.
 2. GitHub kontua konektatu.
 
-[Hemen](https://render.com/docs/deploy-flask)
+[Hemen](https://render.com/docs/deploy-flask) flask Renderren desplegatzeko tutoriala. 
 
 Lehendabizi, Rederri bere zerbitzarian `flask` instalatu behar duela esan behar diogu. Horretarako gure karpetan `requirements.txt` izeneko artxibo bat sortuko dugu eta hau idatzi: 
 
@@ -211,6 +214,15 @@ gunicorn
 Horrela, Rederrek badaki zer instalatu zerbitzarian. Hau, guk lokalean egin dugun `pip install flask` -en berdina egitea da, baina renderren zerbitzarian.
 Gainera, Render bezalako hosting-etan Flask-en `flask run` ez da ekoizpenerako gomendatzen. Horregatik erabiltzen da `gunicorn`, sendoagoa eta egonkorragoa baita.
 
+💡 **Gogoratu**: Zerbait aldatu ondoren, eguneratu gitHub-en
+
+```
+git add .
+git commit -m "requirements sortu"
+git push
+Username eta token sartu VSC-n
+```
+
 Ondoren, Renderren jarraitu:
 
 Web service berri bat sortu. 
@@ -220,5 +232,6 @@ GitHub-eko dagokion repositoriora konektatu.
 Beste guztia horrela gelditu behar da:
 ![Flask-render-2](static/img/readme_azalpena/flask-render-3.png)
 
-Azkenik, `DEPLOY WEB SERVICE KLIKATU`
+Azkenik, `DEPLOY WEB SERVICE KLIKATU`. Dena ondo joan bada, horrela agertu behar da. 
+![Flask-render-azkena](static/img/readme_azalpena/flask-render-azkena.png)
 ---
