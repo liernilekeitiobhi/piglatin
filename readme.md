@@ -205,9 +205,11 @@ Lehendabizi, Rederri bere zerbitzarian `flask` instalatu behar duela esan behar 
 
 ```
 # Flask Framework
-Flask==1.0.2
+Flask==3.1.0
+gunicorn
 ```
 Horrela, Rederrek badaki zer instalatu zerbitzarian. Hau, guk lokalean egin dugun `pip install flask` -en berdina egitea da, baina renderren zerbitzarian.
+Gainera, Render bezalako hosting-etan Flask-en `flask run` ez da ekoizpenerako gomendatzen. Horregatik erabiltzen da `gunicorn`, sendoagoa eta egonkorragoa baita.
 
 Ondoren, Renderren jarraitu:
 
@@ -218,4 +220,5 @@ GitHub-eko dagokion repositoriora konektatu.
 Beste guztia horrela gelditu behar da:
 ![Flask-render-2](static/img/readme_azalpena/flask-render-3.png)
 
+Azkenik, `DEPLOY WEB SERVICE KLIKATU`
 ---
